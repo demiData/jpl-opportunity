@@ -40,4 +40,47 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script type="text/javascript">
+
+        // Night Sky
+
+        var canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = document.getElementById('sky').offsetHeight;
+
+        var stars = [],
+            FPS = 0,
+            x = canvas.width;
+
+        for (let i = 0; i < x; i++) {
+          stars.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random(),
+            vx: Math.floor(Math.random() * 10) - 5,
+            vy: Math.floor(Math.random() * 10) - 5
+          });
+        }
+
+        // The scene
+
+        function draw() {
+          ctx.clearRect(0,0,canvas.width,canvas.height);
+          
+          ctx.globalCompositeOperation = "lighter";
+          
+          for (let i = 0, x = stars.length; i < x; i++) {
+            let s = stars[i];
+          
+            ctx.fillStyle = "#EEE2E2";
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
+            ctx.fill();
+          }
+        }
+          
+        draw();
+  </script>
 </html>

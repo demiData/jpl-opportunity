@@ -1,0 +1,60 @@
+div {
+    color: white;
+    text-align: right;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 3rem;
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+//    justify-content: flex-end;
+   width: 750px;
+   
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    padding: 0 4rem;
+    height: 100%;
+    z-index: 999;
+}
+
+.card1 {
+    
+    background-color: rgb(226, 80, 47) ;
+}
+
+.card2 {
+    background-color: rgb(208, 66, 62);
+}
+
+
+.card3 {
+    background-color: rgb(172, 53, 72);
+}
+
+
+.logo {
+    width: 200px;
+}
+
+.signature {
+    padding: 1em 0;
+}
+
+.signature a {
+    // text-decoration: none;
+    color: #e9fb83;
+}
